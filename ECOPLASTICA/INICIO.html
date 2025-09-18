@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio - EPISA</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+  }
+
+  /* HEADER Y LOGO */
+  header {
+    position: relative;
+    background: #fff;
+    border-bottom: 4px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header img.logo {
+    height: 70px;
+  }
+
+  /* NAVBAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #007b55;
+  }
+
+  .btn-especial {
+    background: #007b55;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  /* SECCIÓN 1 - PROBLEMA */
+  .section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .section h2 {
+    color: #007b55;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  .section h1 {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+
+  .section p {
+    font-size: 1rem;
+    margin-top: 10px;
+    max-width: 600px;
+  }
+
+   /* Footer */
+   footer {
+  background: #111;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+  /* SECCIÓN 2 - RECICLADO */
+  .section2 {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+
+  .section2 h1 {
+    color: #007b55;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .section2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .faq li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  .faq li span {
+    color: #007b55;
+    font-weight: bold;
+  }
+
+  /* SECCIÓN 3 - VISIÓN Y PRODUCTOS */
+ /* SECCIÓN VISIÓN Y PRODUCTOS */
+.vision {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.vision-contenido {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* texto a la izquierda, productos a la derecha */
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.vision h2 {
+  color: #007b55;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.vision h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.producto {
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.producto h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.producto ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.producto li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  font-size: .9rem;
+}
+
+.producto li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+}
+
+.producto a {
+  color: #007b55;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .vision-contenido {
+    grid-template-columns: 1fr;
+  }
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+  /* SECCIÓN 4 - PARTE VERDE FINAL */
+ .parte-verde {
+  background: #007b55;
+  color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.contenido-verde {
+  flex: 2;
+  min-width: 300px;
+}
+
+.contenido-verde h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.contenido-verde h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.contenido-verde p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.linea-blanca {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  margin: 20px 0;
+}
+
+.imagen-verde {
+  flex: 1;
+  text-align: center;
+}
+
+.imagen-verde img {
+  max-width: 220px;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.pie-foto {
+  font-size: 0.8rem;
+  color: #fff;
+  opacity: 0.9;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .parte-verde {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER CON LOGO Y NAV -->
+<header>
+  <img src="logooo.jpg" alt="Logo EPISA" class="logo"> <!-- Convierte el PDF a imagen logo.png -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+     
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+</header>
+
+<!-- SECCIÓN 1 -->
+<section class="section">
+  <div>
+    <h2>Los residuos plásticos, problema sin solución</h2>
+    <h1>¡Hasta ahora!</h1>
+    <p>Hace algunos años, tomamos conciencia de la cantidad de residuos plásticos que existe en cada rincón del planeta y que son desechados, dispersándose permanentemente de tal modo que se dificulta juntarlos y contaminan el medio ambiente (suelo, agua y aire). La inquietud y preocupación nos llevó a desarrollar este plan para dar respuesta a una situación compleja como es la reutilización de millones de toneladas de residuos plásticos que se encuentran en todos lados y hasta ahora no se les ha dado un utilidad beneficiosa.</p>
+  </div>
+  <img src="i1.png" alt="Planeta Verde">
+</section>
+
+<!-- SECCIÓN 2 -->
+<section class="section2">
+  <div>
+    <h1>Reciclado integral de plásticos</h1>
+    <h2>Posconsumo en el mundo</h2>
+    <p>El reciclado integral de plásticos posconsumo es un enfoque integral para gestionar y reutilizar los desechos plásticos generados después de su uso inicial. Este proceso abarca la recolección, clasificación, descontaminación y transformación de diversos tipos de plásticos descartados por consumidores en productos útiles.  A diferencia del reciclaje convencional, que a menudo implica la reproducción de un solo tipo de plástico, el reciclado integral busca maximizar la recuperación de materiales y minimizar el impacto ambiental.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <p> En este método, los plásticos posconsumo se someten a tratamientos específicos para eliminar contaminantes y prepararlos para su reintegración en el ciclo productivo. Los plásticos reciclados integralmente pueden utilizarse en una variedad de aplicaciones, como la fabricación de nuevas botellas, envases, productos textiles, muebles y componentes de construcción. Este enfoque contribuye a reducir la dependencia de los recursos vírgenes, disminuir la acumulación de residuos y mitigar el impacto ambiental asociado con la producción de plásticos convencionales.
+El reciclado integral de plásticos posconsumo representa una estrategia crucial para abordar los desafíos ambientales relacionados con la gestión de residuos plásticos, promoviendo la economía circular y fomentando prácticas sostenibles en la gestión de recursos.</p>
+  </div>
+  <ul class="faq">
+    <li>1 - ¿En qué consiste el proyecto de reciclado y reutilización de plásticos?</li>
+    <li><span>2 - ¿Cuál es la tecnología de última generación que emplea el proyecto y cómo difiere de las prácticas convencionales?</span></li>
+    <li>3 - ¿Cuál es la ventaja de utilizar "Material Ecológico Universal" en la fabricación de sus productos?</li>
+    <li>4 - ¿Cómo contribuye el proyecto a la reducción de la huella ambiental y la contaminación?</li>
+    <li>5 - ¿Qué aplicaciones específicas tienen las placas multipropósito fabricadas en el proyecto?</li>
+    <li><span>6 - ¿Cómo aborda el proyecto la problemática habitacional en Sudamérica y otros continentes?</span></li>
+  </ul>
+</section>
+
+<!-- SECCIÓN 3 -->
+<section class="vision">
+  <div class="vision-contenido">
+    <!-- Texto a la izquierda -->
+    <div class="texto">
+      <h2>NUESTRA VISIÓN</h2>
+      <h1>VISIÓN</h1>
+      <p>Aplicar alta tecnología al proceso de reciclaje de residuos plásticos Posconsumo, de tal forma de lograr una reutilización altamente beneficiosa para el medio ambiente y la Sociedad.</p>
+    </div>
+
+    <!-- Productos a la derecha -->
+    <div class="productos">
+      <!-- Tarjeta: Placas -->
+      <div class="producto">
+        <div class="thumb">
+          <img src="i2.png" alt="Placas multipropósito">
+        </div>
+        <h3>Placas para construcción Multipropósito</h3>
+        <ul>
+          <li>Se puede clavar, atornillar, pegar, etc.</li>
+          <li>Liviana, íntegramente lavable.</li>
+          <li>No se corroe.</li>
+          <li>Resiste al intemperismo.</li>
+          <li>No son contaminantes ni nocivos para la salud del humano y el medio ambiente.</li>
+        </ul>
+        <a href="#">MÁS DETALLES</a>
+      </div>
+
+      <!-- Tarjeta: Viviendas -->
+      <div class="producto">
+        <div class="thumb">
+          <img src="i3.png" alt="Viviendas ecológicas">
+        </div>
+        <h3>Viviendas ecológicas</h3>
+        <ul>
+          <li>No hay limitaciones para su diseño.</li>
+          <li>Costos más bajos y rapidez de ejecución.</li>
+          <li>Compatibles con todo tipo de construcciones.</li>
+          <li>Limpieza y orden en la construcción.</li>
+          <li>Seguridad en obra.</li>
+        </ul>
+        <a href="#">MÁS DETALLES</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓN 4 - PARTE VERDE -->
+<section class="parte-verde">
+  <div class="contenido-verde">
+    <h1>LA CABEZA DEL EQUIPO DE ESTE SUEÑO...</h1>
+    <h2>JOSÉ FERNANDO MARANZANO</h2>
+    <p>
+      Empresario Argentino y Lic. en Administración de empresas, desde los 90´s, 
+      se especializó en el proceso de reciclaje y reutilización de residuos de plástico. 
+      Ha desarrollado y patentado procesos de reutilización de residuos plásticos 
+      a través de la utilización de alta tecnología. Es, desde 2006, presidente de 
+      “FARI” Fundación Argentina de Reciclado Plásticos. 
+      Ha recibido varios premios y menciones, donde se destaca el Premio Quality Summit Internacional, 
+      Galardón de Categoría Oro, en la convención internacional del “BID”, reconociendo a 
+      Eco Plástica Industrial en el término de liderazgo, calidad, innovación y excelencia.
+    </p>
+
+    <!-- Salto de línea blanco -->
+    <div class="linea-blanca"></div>
+
+    <p><em>
+      Lo que han hecho hasta ahora otros recicladores, son cosas necesarias, 
+      pero muy básicas, que no requieren de una gran tecnología y no resultan en una utilidad 100% aprovechable, 
+      cumpliendo solo los objetivos puntuales de aminorar la utilización de los recursos naturales 
+      y reducir la contaminación ambiental. El equipo que me acompaña y yo, sostenemos altos estándares 
+      de seguridad industrial y desempeñamos nuestras actividades en armonía con el medio ambiente.
+    </em></p>
+  </div>
+
+  <div class="imagen-verde">
+    <img src="i4.jpg" alt="José Fernando Maranzano">
+    <p class="pie-foto">Premio Internacional Quality Summit Categoría Oro</p>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+<footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>EPI S. A. - Reciclado Integral de Plásticos</h3>
+      <p>
+        Eco Plástica Internacional S. A. lidera la innovación en el reciclado de plásticos, ofreciendo soluciones integrales y sostenibles para el medio ambiente y la industria.  
+        Conocé nuestros proyectos de hilado, fabricación de placas ecológicas, carpintería ecológica y fabricación de muebles.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Negocios</h3>
+      <ul>
+        <li><a href="#">Viviendas Ecológicas</a></li>
+        <li><a href="#">Hilo y Tela</a></li>
+        <li><a href="#">Placas Ecológicas</a></li>
+        <li><a href="#">Carpintería Ecológica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>EPI S. A. © 2025. .</p>
+  </div>
+</footer>
+
+</body>
+</html>

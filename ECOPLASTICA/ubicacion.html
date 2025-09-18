@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ubicación - EPISA</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, Helvetica, sans-serif; color: #222; line-height: 1.6; }
+
+    /* HEADER FIJO */
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 4px solid #000;
+      z-index: 1100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: #0b5a36;
+      font-size: 20px;
+    }
+    .logo small {
+      display: block;
+      font-size: 10px;
+      color: #666;
+      font-weight: 600;
+    }
+
+    nav { display: flex; align-items: center; gap: 18px; }
+    nav ul { list-style: none; display: flex; gap: 18px; align-items: center; }
+    nav a { text-decoration: none; color: #111; font-weight: 700; font-size: 15px; }
+    nav a:hover { color: #007b55; }
+    .btn-especial {
+      background: #0b7a4a; color: #fff; padding: 8px 14px;
+      border-radius: 6px; text-decoration: none; font-weight: 700;
+    }
+
+    main { padding-top: 120px; max-width: 1100px; margin: 0 auto; }
+
+    /* HERO VERDE */
+    .hero {
+      background: linear-gradient(90deg, #0b7a4a 0%, #0a6f43 100%);
+      color: #fff;
+      padding: 48px 22px;
+      border-radius: 6px;
+      margin: 12px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 34px; font-weight: 900; margin-bottom: 8px; }
+    .hero p.lead { font-size: 20px; font-weight: 700; }
+
+    section.content { padding: 36px 20px; background: #fff; }
+    h2.section-title { color: #0b7a4a; font-size: 20px; margin-bottom: 14px; font-weight: 800; }
+    p.intro { font-size: 16px; margin-bottom: 18px; color: #333; }
+
+    ul.ventajas { list-style: none; margin: 10px 0 24px 0; padding: 0; }
+    ul.ventajas li {
+      position: relative; padding-left: 28px; margin-bottom: 12px;
+      font-size: 15px; color: #333;
+    }
+    ul.ventajas li::before {
+      content: "✔"; position: absolute; left: 0; top: 0;
+      color: #28a745; font-weight: 800;
+    }
+    ul.ventajas li b { color: #0b5a36; }
+
+    /* LUGAR PARA LA IMAGEN */
+    .mapa {
+      margin: 20px 0;
+      text-align: center;
+    }
+    .mapa img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .intro {
+      border-left: 6px solid #0b7a4a;
+      padding: 16px 18px;
+      margin: 26px 0 40px 0;
+      background: #fafafa;
+      color: #222;
+      font-size: 15px;
+    }
+
+ /* Footer */
+   footer {
+  background: #111;
+  color: #eee;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
+
+.footer-contenido {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-col p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <div style="width:46px;height:46px;border-radius:8px;background:#0b7a4a;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;">E</div>
+      <div>
+        <div class="brand">EPI S. A.</div>
+        <small>Construyendo un mañana ecológico</small>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="inicio.html">INICIO</a></li>
+        <li><a href="EMPRESA.html">EMPRESA</a></li>
+        <li><a href="ubicacion.html">UBICACIÓN</a></li>
+        <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+        <li><a href="IMPACTO.html">IMPACTO</a></li>
+        <li><a href="beneficios.html">BENEFICIOS</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+      </ul>
+      <a class="btn-especial" href="INFORMACION ESPECIAL.html">INFORMACIÓN ESPECIAL</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>1° POLO INTERNACIONAL DE RECICLADO</h1>
+      <p class="lead">Integral de los plásticos posconsumo</p>
+    </div>
+<!-- LUGAR RESERVADO PARA LA IMAGEN -->
+      <div class="mapa">
+        <img src="mapa.jpg" alt="Mapa de Fray Bentos, Uruguay (espacio reservado)">
+      </div>
+
+    <section class="content">
+      <h2 class="section-title">Nuestra Ubicación</h2>
+      <p class="intro">
+        El Polo Industrial de Reciclado Integral de los Plásticos de Eco Plástica Internacional se encuentra estratégicamente ubicado en la ciudad de Fray Bentos, Uruguay. Esta ciudad, situada en la República Oriental del Uruguay, se ha consolidado como una de las zonas industriales más importantes de la región debido a su ubicación privilegiada y su infraestructura favorable para la industria.
+      </p>
+
+      <h3>Ventajas de la Ubicación</h3>
+      <ul class="ventajas">
+        <li><b>Zona Industrial:</b> Fray Bentos se destaca por su perfil industrial, con una infraestructura desarrollada para el establecimiento de empresas y la operación eficiente de industrias.</li>
+        <li><b>Acceso al Río Uruguay:</b> El Polo Industrial cuenta con acceso directo al río Uruguay, lo que facilita tanto la importación de materias primas como la exportación de productos terminados a través de su puerto propio.</li>
+        <li><b>Conexiones con Países Limítrofes:</b> La ubicación estratégica del Polo Industrial permite un fácil acceso a los países vecinos, lo que facilita las operaciones comerciales con estos mercados.</li>
+        <li><b>Apoyo Gubernamental:</b> El municipio de Fray Bentos, liderado por el Ing. Omar Lafrut, ha demostrado un gran interés y apoyo para la instalación y desarrollo del Polo Industrial...</li>
+        <li><b>Recursos Naturales:</b> La zona cuenta con recursos naturales abundantes y una geografía favorable para la instalación de industrias, lo que contribuye al desarrollo sostenible del proyecto.</li>
+      </ul>
+
+      
+      <p class="intro">
+        La ubicación estratégica del Polo Industrial en Fray Bentos, Uruguay, por parte del gobierno nacional ofrece una serie de ventajas y oportunidades para el desarrollo exitoso del proyecto, asegurando su competitividad y sostenibilidad a largo plazo.
+      </p>
+
+      
+    </section>
+
+   <!-- Footer -->
+<footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>EPI S. A. - Reciclado Integral de Plásticos</h3>
+      <p>
+        Eco Plástica Internacional S. A. lidera la innovación en el reciclado de plásticos, ofreciendo soluciones integrales y sostenibles para el medio ambiente y la industria.  
+        Conocé nuestros proyectos de hilado, fabricación de placas ecológicas, carpintería ecológica y fabricación de muebles.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Negocios</h3>
+      <ul>
+        <li><a href="#">Viviendas Ecológicas</a></li>
+        <li><a href="#">Hilo y Tela</a></li>
+        <li><a href="#">Placas Ecológicas</a></li>
+        <li><a href="#">Carpintería Ecológica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>EPI S. A. © 2025. .</p>
+  </div>
+</footer>
+
+  </main>
+</body>
+</html>

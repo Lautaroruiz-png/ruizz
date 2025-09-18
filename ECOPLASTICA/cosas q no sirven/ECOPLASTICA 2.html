@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecoplastic Internacional</title>
+  <style>
+    /* === ESTILOS BASE (MOBILE FIRST) === */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Barra de navegación */
+    nav {
+      background-color: #e6f2e6;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: none; /* oculto en móviles */
+      flex-direction: column;
+      background-color: #e6f2e6;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+    }
+
+    nav ul li {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #1f5134;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0a2d19;
+    }
+
+    .btn-especial {
+      background: #1f5134;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn-especial:hover {
+      background: #0a2d19;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+      color: #1f5134;
+    }
+
+    /* Contenido principal */
+    .contenido {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .texto h2 {
+      color: #1f5134;
+      font-size: 18px;
+    }
+
+    .texto h1 {
+      font-size: 26px;
+      margin: 15px 0;
+    }
+
+    .texto p {
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .imagen img {
+      max-width: 250px;
+      margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* === ESTILOS PARA TABLET Y PC === */
+    @media (min-width: 768px) {
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        position: static;
+        width: auto;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+
+      .contenido {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 60px 80px;
+      }
+
+      .texto {
+        width: 55%;
+      }
+
+      .texto h2 {
+        font-size: 22px;
+      }
+
+      .texto h1 {
+        font-size: 34px;
+      }
+
+      .texto p {
+        font-size: 16px;
+      }
+
+      .imagen {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .imagen img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+    <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+     
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+
+  <!-- Contenido principal -->
+  <section class="contenido">
+    <div class="texto">
+      <h2>LOS RESIDUOS PLÁSTICOS, PROBLEMA SIN SOLUCIÓN</h2>
+      <h1>¡Hasta ahora!</h1>
+      <p>
+        Hace algunos años, tomamos conciencia de la cantidad de residuos plásticos que existen en cada rincón del planeta y que son desechados, 
+        dispersándose permanentemente de tal modo que se dificulta juntarlos y contaminan el medio ambiente (suelo, agua y aire).  
+        La inquietud y preocupación nos llevó a desarrollar este plan para dar respuesta a una situación compleja como es la reutilización de millones de toneladas de residuos plásticos que se encuentran en todos lados y hasta ahora no se les ha dado un utilidad beneficiosa.
+      </p>
+    </div>
+    <div class="imagen">
+      <img src="https://cdn-icons-png.flaticon.com/512/2950/2950411.png" alt="Planeta verde">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Ecoplastic Internacional - Todos los derechos reservados</p>
+    <p>Contacto: info@ecoplastic.com | Tel: +598 0000 0000</p>
+  </footer>
+
+  <script>
+    // Script para abrir/cerrar menú en móviles
+    const menu = document.querySelector("nav ul");
+    document.querySelector(".menu-toggle").addEventListener("click", () => {
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    });
+  </script>
+
+</body>
+</html>
+

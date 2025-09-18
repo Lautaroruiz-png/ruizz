@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impacto - EPISA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #eee;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: green;
+    }
+
+    .btn-especial {
+      background: green;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* HEADER */
+    header {
+      margin-top: 60px;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: green;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    /* MAIN */
+    main {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    main h2 {
+      color: green;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+
+    .impacto-section {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .impacto-texto {
+    flex: 2;
+  }
+
+  .impacto-imagen {
+    flex: 1.2; /* más ancha la columna */
+  }
+
+  .impacto-imagen img {
+    width: 100%;
+    height: 100%;
+    max-height: 900px;  /* controla el tamaño total */
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 900px) {
+    .impacto-section {
+      flex-direction: column;
+    }
+
+    .impacto-imagen img {
+      max-height: none; /* en móvil que se ajuste automáticamente */
+    }
+  }
+    ul.checklist {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    ul.checklist li {
+      margin-bottom: 12px;
+    }
+
+    ul.checklist li::before {
+      content: "✔️ ";
+      color: green;
+      font-weight: bold;
+    }
+
+    .parrafo-linea {
+      border-left: 4px solid green;
+      padding-left: 15px;
+      margin-top: 20px;
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #eee;
+      padding: 40px 20px 20px;
+      font-size: 14px;
+    }
+
+    .footer-contenido {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .footer-col p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .impacto-section {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="empresa.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="negocios.html">NEGOCIOS</a></li>
+      <li><a href="impacto.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Impacto Ambiental y Social</h1>
+    <p>En Eco Plástica Internacional, estamos comprometidos con el desarrollo sostenible y el cuidado del medio ambiente. 
+    A través de nuestras operaciones y productos, buscamos generar un impacto positivo en el entorno y en la comunidad. 
+    A continuación, se destacan algunos de los principales aspectos del impacto ambiental y social de nuestro proyecto:</p>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <!-- IMPACTO AMBIENTAL CON IMAGEN -->
+    <h2>Impacto Ambiental</h2>
+    <div class="impacto-section">
+      <div class="impacto-texto">
+        <ul class="checklist">
+          <li><b>Reciclaje Integral de Plásticos:</b> Nuestro Polo Industrial está diseñado para reciclar integralmente una amplia gama de plásticos post consumo, incluyendo botellas de plástico PET, tambores de fertilizantes, insecticidas, agroquímicos y otros desechos plásticos. Estos materiales son recuperados de vertederos, parques, calles, ríos, mares y otras fuentes, reduciendo así la contaminación ambiental y conservando los recursos naturales.</li>
+          <li><b>Reducción de Contaminación:</b> Al reciclar millones de kilogramos de plástico cada año, contribuimos a reducir la contaminación del aire, el agua y el suelo. Además, evitamos que estos desechos plásticos terminen en vertederos o en el medio ambiente, donde pueden causar daños a la vida silvestre y los ecosistemas.</li>
+          <li><b>Uso de Materiales Ecológicos:</b> Nuestros esfuerzos de reciclaje ayudan a reducir la cantidad de desechos plásticos que contaminan los ecosistemas. Esto beneficia a la biodiversidad y asegura la salud y la sostenibilidad de los ecosistemas naturales.</li>
+        </ul>
+      </div>
+      <div class="impacto-imagen">
+        <img src="impacto.jpg" alt="Guía de Reciclaje de Plásticos">
+      </div>
+    </div>
+
+    <!-- IMPACTO SOCIAL -->
+    <h2>Impacto Social</h2>
+    <ul class="checklist">
+      <li><b>Generación de Empleo:</b> La operación de nuestro Polo Industrial es creadora de 900 puestos laborales de mano de obra directa y 600 puestos de trabajo de mano de obra indirecta, que irán en aumento anual en un 20% en todo el país, contribuyendo así al desarrollo económico y social de la región.</li>
+      <li><b>Mejora de la Calidad de Vida:</b> Nuestras viviendas de gran confort, ofrecen una solución habitacional asequible y de calidad para comunidades en general, en todo nivel social, mejorando así su calidad de vida y bienestar.</li>
+      <li><b>Fomento de la Innovación:</b> A través de nuestra inversión en tecnología y procesos innovadores, fomentamos la tecnología de última generación y el desarrollo de soluciones sostenibles en la industria del reciclaje y la construcción.</li>
+    </ul>
+
+    <p class="parrafo-linea">
+      En Eco Plástica Internacional, estamos comprometidos a maximizar los beneficios ambientales y sociales de nuestras operaciones, 
+      contribuyendo así a un futuro más limpio, saludable y sostenible para las generaciones futuras.
+    </p>
+  </main>
+
+<!-- Pie de página -->
+  <footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>EPI S. A. - Reciclado Integral de Plásticos</h3>
+      <p>
+        Eco Plástica Internacional S. A. lidera la innovación en el reciclado de plásticos, ofreciendo soluciones integrales y sostenibles para el medio ambiente y la industria.  
+        Conocé nuestros proyectos de hilado, fabricación de placas ecológicas, carpintería ecológica y fabricación de muebles.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Negocios</h3>
+      <ul>
+        <li><a href="#">Viviendas Ecológicas</a></li>
+        <li><a href="#">Hilo y Tela</a></li>
+        <li><a href="#">Placas Ecológicas</a></li>
+        <li><a href="#">Carpintería Ecológica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>EPI S. A. © 2025.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negocios - EPISA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fff;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #eee;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: green;
+    }
+
+    .btn-especial {
+      background: green;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* HEADER */
+    header {
+      background: #f4f4f4;
+      color: #222;
+      text-align: center;
+      padding: 120px 20px 60px;
+      margin-top: 50px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: green;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* MAIN */
+    main {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    main h2 {
+      color: green;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      margin-bottom: 20px;
+    }
+
+    /* LINEA DE TIEMPO */
+    .timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 40px auto;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background: green;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .container {
+      padding: 20px;
+      position: relative;
+      width: 50%;
+    }
+
+    .container.left {
+      left: 0;
+    }
+
+    .container.right {
+      left: 50%;
+    }
+
+    .content {
+      padding: 20px;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .content img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background: green;
+      border: 3px solid #fff;
+      top: 20px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .container.right::after {
+      left: -10px;
+    }
+
+    .content h3 {
+      color: green;
+      margin-bottom: 10px;
+    }
+
+    /* LISTA CON TILDES */
+    ul.checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.checklist li::before {
+      content: "✔️ ";
+      color: green;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      .timeline::after {
+        left: 31px;
+      }
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .container.right {
+        left: 0%;
+      }
+      .container::after {
+        left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Nuestros Negocios</h1>
+    <p>El Polo Industrial de Reciclado Integral de los Plásticos de Eco Plástica Internacional está compuesto por cuatro fábricas que se especializan en la fabricación de productos ecológicos y sostenibles a partir del reciclado de plásticos.</p>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <h2>Línea de Tiempo</h2>
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <img src="fabrica1.jpg" alt="Fábrica 1">
+          <h3>1° FÁBRICA: PLANTA DE HILADO</h3>
+          <p><b>Actividad Principal:</b> Reciclaje de botellas de plástico PET post consumo para la fabricación de hilo y tela.</p>
+          <p><b>Capacidad Anual:</b> Se reciclarán 20,000,000 kilogramos de plástico PET anualmente.</p>
+          <p><b>Productos:</b> Hilo y tela reciclados de alta calidad, con propiedades originales conservadas.</p>
+          <p><b>Mercado Objetivo:</b> Empresas textiles nacionales e internacionales que buscan materiales sostenibles y de calidad a precios competitivos.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <img src="fabrica2.jpg" alt="Fábrica 2">
+          <h3>2° FÁBRICA: PLACAS ECOLÓGICAS</h3>
+          <p><b>Actividad Principal:</b> Reciclado integral de todos los tipos de plásticos post consumo para la fabricación de placas ecológicas.</p>
+          <p><b>Capacidad Anual:</b> Se reciclarán 36,000,000 kilogramos de plástico anualmente.</p>
+          <p><b>Productos:</b> Placas ecológicas universales con propiedades superiores a la madera, el metal y otros materiales de construcción.</p>
+          <p><b>Aplicaciones:</b> Construcción de viviendas ecológicas y muebles, entre otros usos.</p>
+        </div>
+      </div>
+      <div class="container left">
+        <div class="content">
+          <img src="fabrica3.jpg" alt="Fábrica 3">
+          <h3>3° FÁBRICA: CARPINTERÍA ECOLÓGICA</h3>
+          <p><b>Actividad Principal:</b> Fabricación de viviendas ecológicas utilizando las placas ecológicas producidas en la segunda fábrica.</p>
+          <p><b>Capacidad Anual:</b> Se utilizarán 28,800,000 kilogramos de placas ecológicas anualmente.</p>
+        </div>
+      </div>
+      <div class="container right">
+        <div class="content">
+          <img src="fabrica4.jpg" alt="Fábrica 4">
+          <h3>4° FÁBRICA: MUEBLES ECOLÓGICOS</h3>
+          <p><b>Actividad Principal:</b> Fabricación de muebles de oficina y hogar utilizando las placas ecológicas producidas en la segunda fábrica.</p>
+          <p><b>Capacidad Anual:</b> Se utilizarán 7,200,000 kilogramos de placas ecológicas anualmente.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GARANTÍAS -->
+    <h2>Garantías de las Viviendas</h2>
+    <p>En Eco Plástica Internacional, respaldamos la calidad y durabilidad de nuestros productos con garantías sólidas y transparentes:</p>
+    <ul class="checklist">
+      <li><b>Ruptura por Fallas Naturales:</b> Garantizamos la integridad y resistencia de nuestras viviendas contra fallas causadas por condiciones naturales, como degradación del material, durante un periodo de 100 años.</li>
+      <li><b>Daños Ajenos o Accidentales:</b> En caso de daños por vandalismo o accidentes, ofrecemos garantía parcial, cubriendo hasta el 50% del valor real.</li>
+      <li><b>Robustez contra Actos de Vandalismo:</b> Viviendas diseñadas para resistir y mitigar daños por vandalismo.</li>
+      <li><b>Resistencia a Elementos Externos:</b> Resistentes a condiciones climáticas adversas como lluvias, vientos intensos, sismos y temperaturas extremas.</li>
+      <li><b>Servicio Postventa y Atención al Cliente:</b> Atención inmediata y personalizada para resolver cualquier problema o servicio de mantenimiento.</li>
+    </ul>
+    <p>En Eco Plástica Internacional, nuestra garantía es más que una promesa: es un compromiso con la calidad, la durabilidad y la satisfacción del cliente en todas las circunstancias.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 EPISA - Construyendo un mañana ecológico</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa - Eco Plástica Internacional S.A.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+
+    /* Barra de navegación */
+    header {
+      background: #fff;
+      border-bottom: 2px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: green;
+    }
+
+    .btn-especial {
+      background: green;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-especial:hover {
+      background: darkgreen;
+    }
+
+    /* Sección Empresa */
+    .empresa {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .empresa h2 {
+      color: #008000;
+    }
+
+    .empresa img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .valores {
+      margin-top: 20px;
+    }
+
+    .valores ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .valores ul li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .valores ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">INICIO</a></li>
+        <li><a href="#">EMPRESA</a></li>
+        <li><a href="#">UBICACIÓN</a></li>
+        <li><a href="#">NEGOCIOS</a></li>
+        <li><a href="#">IMPACTO</a></li>
+        <li><a href="#">BENEFICIOS</a></li>
+        <li><a href="#">CONTACTO</a></li>
+        <li><a href="#">OTROS</a></li>
+      </ul>
+      <a href="#" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+    </nav>
+  </header>
+
+  <!-- Contenido Empresa -->
+  <section class="empresa">
+    <h1>Eco Plástica Internacional S.A.</h1>
+    <p>
+      Eco Plástica Internacional S. A., es una empresa Uruguaya con el objetivo de gestionar un crédito para la construcción del Polo Internacional de Reciclado Integral de los Plásticos. Nuestro compromiso con la sostenibilidad y la innovación nos ha llevado a establecer un complejo industrial único en su tipo en la República Oriental del Uruguay.
+    </p>
+
+    <h2>Valores Corporativos</h2>
+    <div class="valores">
+      <ul>
+        <li>Compromiso con la sostenibilidad ambiental.</li>
+        <li>Innovación y búsqueda constante de mejoras.</li>
+        <li>Ética y transparencia en todas nuestras operaciones.</li>
+        <li>Responsabilidad social y compromiso con la comunidad.</li>
+      </ul>
+    </div>
+
+    <h2>Nuestro Compromiso Ambiental</h2>
+    <p>
+      En Eco Plástica Internacional S. A., estamos comprometidos con la protección del medio ambiente y la reducción de la contaminación plástica. A través de nuestro Polo Industrial de Reciclado Integral, buscamos mitigar el impacto negativo de los desechos plásticos, promoviendo prácticas de reciclaje y reutilización que contribuyan a un futuro más sostenible para las generaciones venideras.
+    </p>
+
+    <img src="empresa.jpg" alt="Imagen de la empresa y mapa de Uruguay">
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Eco Plástica Internacional S.A. | Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>

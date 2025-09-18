@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa - Eco Plástica Internacional S.A.</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #fff;
+      color: #333;
+    }
+
+    /* Barra de navegación */
+    header {
+      background: #fff;
+      border-bottom: 2px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: green;
+    }
+
+    .btn-especial {
+      background: green;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .btn-especial:hover {
+      background: darkgreen;
+    }
+
+    /* Sección Empresa */
+    .empresa {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .empresa .texto {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .empresa h1 {
+      color: #008000;
+    }
+
+    .valores {
+      margin-top: 20px;
+    }
+
+    .valores ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .valores ul li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .valores ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: green;
+    }
+
+    .empresa .imagenes {
+      flex: 1;
+      min-width: 300px;
+      position: relative;
+    }
+
+    .empresa .imagenes img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .empresa .imagenes img:last-child {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #eee;
+      padding: 40px 20px 20px;
+      font-size: 14px;
+    }
+
+    .footer-contenido {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-col {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-col h3 {
+      color: #fff;
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .footer-col p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col ul li a {
+      color: #ccc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      .empresa {
+        flex-direction: column;
+      }
+    }
+
+    .cuadro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.cuadro .columna {
+  flex: 1;
+  min-width: 300px;
+}
+
+.cuadro img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.cuadro h3 {
+  margin-bottom: 10px;
+  color: #008000;
+}
+
+
+.innovacion {
+  background: linear-gradient(135deg, #008000, #009f4d);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: left;
+}
+
+.innovacion .contenedor {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.innovacion h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.innovacion p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-blanco {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #fff;
+  color: #008000;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-blanco:hover {
+  background: #eee;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Menú de navegación -->
+  <header>
+     <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+    <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+  </header>
+
+  <!-- Contenido Empresa -->
+  <section class="empresa">
+    <div class="texto">
+      <h1>Eco Plástica Internacional S.A.</h1>
+      <p>
+        Eco Plástica Internacional S. A., es una empresa Uruguaya con el objetivo de gestionar un crédito para la construcción del Polo Internacional de Reciclado Integral de los Plásticos. Nuestro compromiso con la sostenibilidad y la innovación nos ha llevado a establecer un complejo industrial único en su tipo en la República Oriental del Uruguay.
+      </p>
+
+      <h2>Valores Corporativos</h2>
+      <div class="valores">
+        <ul>
+          <li>Compromiso con la sostenibilidad ambiental.</li>
+          <li>Innovación y búsqueda constante de mejoras.</li>
+          <li>Ética y transparencia en todas nuestras operaciones.</li>
+          <li>Responsabilidad social y compromiso con la comunidad.</li>
+        </ul>
+      </div>
+
+      <h2>Nuestro Compromiso Ambiental</h2>
+      <p>
+        En Eco Plástica Internacional S. A., estamos comprometidos con la protección del medio ambiente y la reducción de la contaminación plástica. A través de nuestro Polo Industrial de Reciclado Integral, buscamos mitigar el impacto negativo de los desechos plásticos, promoviendo prácticas de reciclaje y reutilización que contribuyan a un futuro más sostenible para las generaciones venideras.
+      </p>
+    </div>
+
+    <div class="imagenes">
+      <img src="empresafot.png" alt="Vista aérea del complejo">
+      <img src="mapa.jpg" alt="Mapa de ubicación">
+    </div>
+    <div class="cuadro">
+  <div class="columna">
+    <img src="mapa.jpg" alt="Mapa Uruguay">
+  </div>
+  <div class="columna">
+    <h3>Nuestra Misión</h3>
+    <p>
+      Transformar los desechos plásticos en materiales ecológicos de alta calidad 
+      para contribuir al cuidado del medio ambiente y ofrecer soluciones innovadoras 
+      en la industria del reciclado.
+    </p>
+  </div>
+</div>
+
+<div class="cuadro">
+  <div class="columna">
+    <h3>Nuestra Visión</h3>
+    <p>
+      Ser líderes en la fabricación de materiales ecológicos y en la promoción de 
+      prácticas sostenibles en la industria, contribuyendo al desarrollo económico 
+      y social de la región y del mundo.
+    </p>
+  </div>
+  <div class="columna">
+    <img src="mapa.jpg" alt="Mapa Uruguay Visión">
+  </div>
+</div>
+  </section>
+
+  <!-- Sección Verde Final -->
+<section class="innovacion">
+  <div class="contenedor">
+    <div class="texto">
+      <h2>Nuestra <br> Innovación</h2>
+      <p>
+        Nos enorgullece haber desarrollado un sistema único de reciclado que transforma los desechos plásticos en materiales ecológicos universales de alta calidad. Nuestro compromiso con la innovación nos impulsa a seguir explorando nuevas tecnologías y procesos para mejorar continuamente nuestras operaciones y productos.
+      </p>
+      <p>
+        En Eco Plástica Internacional S. A., estamos comprometidos con la excelencia y la sostenibilidad en todo lo que hacemos. ¡Únete a nosotros en nuestro viaje hacia un futuro más limpio y sostenible!
+      </p>
+      <a href="contacto.html" class="btn-blanco">FORMAR PARTE DE EPI S. A.</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Pie de página -->
+  <footer>
+  <div class="footer-contenido">
+    <div class="footer-col">
+      <h3>EPI S. A. - Reciclado Integral de Plásticos</h3>
+      <p>
+        Eco Plástica Internacional S. A. lidera la innovación en el reciclado de plásticos, ofreciendo soluciones integrales y sostenibles para el medio ambiente y la industria.  
+        Conocé nuestros proyectos de hilado, fabricación de placas ecológicas, carpintería ecológica y fabricación de muebles.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h3>Negocios</h3>
+      <ul>
+        <li><a href="#">Viviendas Ecológicas</a></li>
+        <li><a href="#">Hilo y Tela</a></li>
+        <li><a href="#">Placas Ecológicas</a></li>
+        <li><a href="#">Carpintería Ecológica</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>EPI S. A. © 2025.</p>
+  </div>
+</footer>
+
+</body>
+</html>

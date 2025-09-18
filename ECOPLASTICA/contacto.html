@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - EPISA</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  /* NAVBAR */
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 4px solid #000;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #007b55;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+
+  .btn-especial {
+    background: #007b55;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  /* CONTENIDO CONTACTO */
+  .contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+  }
+
+  .contacto-info {
+    background: #1c2b32;
+    color: #fff;
+    flex: 1;
+    padding: 40px;
+  }
+
+  .contacto-info h2 {
+    color: #a5d6a7;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .contacto-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  .contacto-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contacto-info strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  .contacto-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .contacto-info address {
+    font-style: normal;
+    margin-top: 10px;
+  }
+
+  /* FORMULARIO */
+  .contacto-form {
+    background: #fff;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contacto-form input,
+  .contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  .contacto-form textarea {
+    resize: none;
+    height: 120px;
+  }
+
+  .contacto-form button {
+    background: #28a745;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .contacto-form button:hover {
+    background: #218838;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      border-top: 2px solid #000;
+      padding: 15px;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    .contacto-container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+  <ul>
+    <li><a href="inicio.html">INICIO</a></li>
+    <li><a href="EMPRESA.html">EMPRESA</a></li>
+    <li><a href="ubicacion.html">UBICACIÓN</a></li>
+    <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+    <li><a href="IMPACTO.html">IMPACTO</a></li>
+    <li><a href="beneficios.html">BENEFICIOS</a></li>
+    <li><a href="contacto.html">CONTACTO</a></li>
+  </ul>
+  <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+</nav>
+
+<!-- CONTACTO -->
+<div class="contacto-container">
+  <div class="contacto-info">
+    <h2>Ponerse en contacto</h2>
+    <h1>No dude en ponerse en contacto con nosotros.</h1>
+    <p>Nuestro equipo se pondrá en contacto para responder a su mensaje.</p>
+
+    <strong>Envíenos un mensaje 📲</strong>
+    <a href="mailto:fagioliruizlautaro.com">fagioliruizlautaro.com</a>
+
+    <strong>Sede de la empresa 📍</strong>
+    <address>
+      Luis Franzini 884 escritorio 102<br>
+      Montevideo, Uruguay
+    </address>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="contacto-form">
+    <form action="https://formsubmit.co/fagioliruizlautaro.com" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre(s) y Apellido(s)" required>
+      <input type="text" name="numero" placeholder="Número de contacto" required>
+      <input type="email" name="correo" placeholder="Dirección de correo electrónico" required>
+      <input type="text" name="asunto" placeholder="Asunto de contacto" required>
+      <textarea name="mensaje" placeholder="Contenido del mensaje" required></textarea>
+<form action="https://formsubmit.co/fagioliruizlautaro.com" method="POST" />
+<input type="email" name="email">
+      <!-- Opciones ocultas -->
+      <input type="hidden" name="_next" value="https://tu-dominio.com/INICIO.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+
+      <button type="submit">ENVIAR FORMULARIO</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

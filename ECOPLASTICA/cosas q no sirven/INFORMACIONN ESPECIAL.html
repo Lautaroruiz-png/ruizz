@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Información Especial - EPISA</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 4px solid #000; /* Línea negra */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #007b55;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    .btn-especial {
+      background: #007b55;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    .contenido {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .contenido h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .contenido h2 {
+      font-size: 1.6rem;
+      margin-top: 30px;
+    }
+
+    .subtitulo {
+      color: #007b55;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .linea-negra {
+      width: 100%;
+      height: 40px;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .contenido p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        border-top: 2px solid #000;
+      }
+      nav ul.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+      <li><a href="#">OTROS</a></li>
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+
+  <!-- CONTENIDO -->
+  <div class="contenido">
+
+    <h1>Departamento Humanitario</h1>
+    <p>Uno de los principales departamento de nuestra empresa será el <strong>DEPARTAMENTO HUMANITARIO</strong> desde el mismo se abordarán necesidades sociales, humanitarias y ecológicas en nuestra comunidad y en áreas afectadas por desastres naturales o conflictos de guerra internacionales. Este departamento tendrá como objetivos los siguientes puntos:</p>
+
+    <p>1° Coordinar donaciones periódicas a países con necesidades extremas de viviendas, recursos y responder a emergencias.</p>
+    <p>2° Asistir con vivienda completas anti sísmicas, muebles y útiles a zona de catástrofe entendiéndose por tal, como “terremotos, inundaciones, huracanes, aluviones, tornados, ciclones, tifones, desbordamientos, tormentas de nieve y torrentes entre otros”.</p>
+    <p>3° Desarrollar programas de ayuda y apoyo a la comunidades necesitadas.</p>
+    <p>4° Mejorar la calidad de vida de los empleados y su familia.</p>
+    <p>5° Promover la diversidad, la inclusión y la igualdad incluyendo las personas con capacidades diferentes.</p>
+    <p>6° Evaluación de necesidades y desarrollo de diversos programas de desarrollo social.</p>
+
+    <div class="linea-negra">Información Especial</div>
+
+    <h2>Creación de Empleo Sostenible</h2>
+    <p class="subtitulo">EL IMPACTO LABORAL DEL MEGA POLO INDUSTRIAL DE RECICLADO</p>
+    <p>Con este Mega Polo industrial de Reciclado Crearemos 960 Puestos laborales en planta permanente y más de 500 indirectos sumando un total de 1.460 esta cantidad se requiere por la razón que se trabaja las 24 hs. y los 365 días del año.</p>
+
+    <h2>Compromiso Social y Solidario</h2>
+    <p class="subtitulo">DONACIONES PERIÓDICAS A INSTITUCIONES Y FAMILIAS VULNERABLES</p>
+    <p>Donaremos cada 6 meses a hospitales, comedores infantiles, escuelas públicas y familias en situación indigente: mesas, sillas, camas, pupitres, bibliotecas, mesas de luz.</p>
+
+    <h2>Excelencia Reconocida</h2>
+    <p class="subtitulo">PREMIOS INTERNACIONALES Y DISTINCIONES NACIONALES POR INNOVACIÓN Y CALIDAD</p>
+    <p>El 28 de Mayo 2018 nos convocaron para entregarnos un premio en Nueva York, QUALITY SUMMIT, categoría “ORO” en la ceremonia internacional del BID motivo en reconocimiento a la contribución en termino de liderazgo, calidad, innovación y excelencia.</p>
+    <p>El 6 de noviembre 2018 fue decretado de INTERÉS LEGISLATIVO de la provincia de Tucumán Argentina.</p>
+
+  </div>
+
+</body>
+</html>
